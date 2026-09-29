@@ -1,6 +1,5 @@
-# goranmilic
 # DevOps Repo Template
-## A place to start fresh
+### A place to start fresh
 
 # Problem
 # Architecture
