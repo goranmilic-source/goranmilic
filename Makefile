@@ -21,4 +21,3 @@ lint: ## Check code style
 
 test: ## Run tests with Pytest
 	$(COMPOSE) exec $(SERVICE) pytest -q
-
