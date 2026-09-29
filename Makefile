@@ -4,7 +4,7 @@ SHELL := /bin/bash
 COMPOSE := docker compose
 SERVICE ?= api
 
-.PHONY: help up down lint test
+.PHONY: help up down lint test check
 
 help: ## Show available commands
 	@grep -E '^[a-zA-Z_-]+:.*## ' $(MAKEFILE_LIST) | \
@@ -21,3 +21,6 @@ lint: ## Check code style
 
 test: ## Run tests with Pytest
 	$(COMPOSE) exec $(SERVICE) pytest -q
+
+check: ## Runs the pre-commit checks for astethics and git leaks.
+	pre-commit run --all-files
