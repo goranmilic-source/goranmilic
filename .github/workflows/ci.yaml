@@ -21,3 +21,14 @@ jobs:
 
       - name: Run all pre-commit hooks
         run: pre-commit run --all-files --show-diff-on-failure
+
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
