@@ -11,3 +11,4 @@
 ## Development setup
 1. Run 'pre-commit install' once after cloning' - This initializes the pre-commit checks which are MANDATORY for a commit.
 2. Run 'make to see available commands.
+3. Prerequisites - Commit signing configured globally (git config --global --get user.signingkey returns a key).
